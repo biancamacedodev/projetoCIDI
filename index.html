@@ -19,99 +19,103 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body class="d-flex flex-column h-100">
 
+    <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container py-1 my-1"> <!-- Reduzindo o padding e a margem verticalmente -->
-                    <a class="getstarted scrollto" href="#about">
-                        <img src="./assets/img/Dashboard/logo.png" alt="" srcset="">
-                    </a>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto small fw-bolder"> <!-- Adicionado mx-auto para centralizar -->
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Serviços</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Sobre Nos</a></li>
-                            <button type="button" class="btn btn-custom" style="background-color: #F38126;">Agende</button>                          
-                        </ul>
-                    </div>
-                </div>
-            </nav>            
-            <!-- Header-->
-            <header class="py-5">
-                <div class="container-fluid p-0">
-                    <div class="banner-div">
-                        <img src="./assets/img/Dashboard/banner_home.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </header>
-            <!-- machine Section-->
-            <section class=" py-5">
-                <div class="container px-5">
-                    <div class="row gx-5 justify-content-center align-items-center">
-                        <!-- Coluna para a imagem -->
-                        <div class="col-md-6">
-                            <img src="./assets/img/Dashboard/machine.png" class="img-fluid" alt="Imagem">
-                        </div>
-                        <!-- Coluna para o texto -->
-                        <div class="col-md-6">
-                            <div class="mt-40">
-                                <h2 class="display-4 fw-bolder"><span class="text-gradient d-inline">Conheça o CIDI</span></h2>
-                                <p class="text-muted mb-4">
-                                    Anexo à Casa de São Carlos, o CIDI - Centro Integrado de Diagnóstico por Imagem - atua há mais de 20 anos na cidade de São Carlos e região.
-                                </p>
-                                <button type="button" class="btn btn-custom" style="background-color: #F38126;">Saiba Mais</button>   
+                    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                        <div class="container">
+                            <a class="getstarted scrollto" href="#">
+                                <img class="imgLogo" src="./assets/img/Dashboard/logo.png">
+                                <button class="navbar-toggler p-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </a>
+                            <!-- Menu de navegação -->
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mx-auto small fw-bolder" style="padding-right: 90px;"> <!-- Adicionado mx-auto para centralizar -->
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="resume.html">Serviços</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Sobre Nos</a></li>
+                                    <a href="agendamento.html"><button type="button" class="btn btn-custom m-2" style="background-color: #F38126;">Agende</button></a>
+                                </ul>
+                            </div>
+                        </div>                        
+                    </nav>            
+                    <header class="py-5">
+                        <div class="container-fluid p-0">
+                            <div class="banner-div">
+                                <img src="./assets/img/Dashboard/banner_home.png" alt="" class="img-fluid w-100">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section> <!-- machine end-->
+                    </header>
+                    
+                    <!-- machine Section-->
+                    <section class="py-5 d-flex justify-content-center align-items-center">
+                        <div class="container px-15">
+                            <div class="row gx-5 justify-content-center align-items-center">
+                                <!-- Coluna para a imagem -->
+                                <div class="col-md-6">
+                                    <img src="./assets/img/Dashboard/machine.png" class="img-fluid" alt="Imagem">
+                                </div>
+                                <!-- Coluna para o texto -->
+                                <div class="col-md-6">
+                                    <div class="mt-40">
+                                        <h2 class="display-4 fw-bolder"><span class="text-gradient d-inline">Conheça o CIDI</span></h2>
+                                        <p class="text-muted mb-4">
+                                            Anexo à Casa de São Carlos, o CIDI - Centro Integrado de Diagnóstico por Imagem - atua há mais de 20 anos na cidade de São Carlos e região.
+                                        </p>
+                                        <a href="agendamento.html"><button type="button" class="btn btn-custom" style="background-color: #F38126;">Saiba mais</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> <!-- machine end-->
 
-            <!-- office section-->
-            <section class="container">
-                <div class="row flex-row-reverse">
-                    <div class="col-md-6">
-                        <img src="./assets/img/Dashboard/office.png" alt="Imagem da Agrinde" class="img-fluid">
-                    </div>
-                    <div class="col-md-6">
-                        <h1>Por que nos escolher?</h1>
-                        <br>
-                        
-                        <div class="d-flex align-items-center">
-                            <img src="./assets/img/Dashboard/icon1.png" alt="" srcset="">
-                            <div class="d-flex flex-column ml-3">
-                                <h5 class="mb-2">Segurança e suporte hospitalar.</h5>
-                                <p class="text-muted mb-4">Estaremos dentro do hospital, o que garante atendimento rápido e apoio especializado em caso de urgência.</p>
-                            </div>
-                        </div>
+                            <!-- office section-->
+                            <section class="container">
+                                <div class="row flex-row-reverse p-50">
+                                    <div class="col-md-6">
+                                        <img src="./assets/img/Dashboard/office.png" alt="Imagem da Agrinde" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1>Por que nos escolher?</h1>
+                                        <br>
+                                        
+                                        <div class="d-flex align-items-center">
+                                            <img  class="imgIcon2" src="./assets/img/Dashboard/icon1.png" alt="" srcset="">
+                                            <div class="d-flex flex-column ml-3">
+                                                <h5 class="mb-2">Segurança e suporte hospitalar.</h5>
+                                                <p class="text-muted mb-4">Estaremos dentro do hospital, o que garante atendimento rápido e apoio especializado em caso de urgência.</p>
+                                            </div>
+                                        </div>
 
-                        <div class="d-flex align-items-center">
-                            <img src="./assets/img/Dashboard/icon2.png" alt="" srcset="">
-                            <div class="d-flex flex-column ml-3">
-                                <h5 class="mb-2">Médicos certificados.</h5>
-                                <p class="text-muted mb-4">Todos os médicos possuem títulos do Colégio Brasileiro de Radiologia e certificados junto ao MEC.</p>
-                            </div>
-                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img class="imgIcon2" src="./assets/img/Dashboard/icon2.png" alt="" srcset="">
+                                            <div class="d-flex flex-column ml-3">
+                                                <h5 class="mb-2">Médicos certificados.</h5>
+                                                <p class="text-muted mb-4">Todos os médicos possuem títulos do Colégio Brasileiro de Radiologia e certificados junto ao MEC.</p>
+                                            </div>
+                                        </div>
 
-                        <div class="d-flex align-items-center">
-                            <img src="./assets/img/Dashboard/icon3.png" alt="" srcset="">
-                            <div class="d-flex flex-column ml-3">
-                                <h5 class="mb-2">Tecnologia e precisão.</h5>
-                                <p class="text-muted mb-4">Resultados mais rápidos por contarem com equipamentos de última geração.</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Botão centralizado -->
-                        <div class="d-grid p-5">
-                            <button type="button" class="btn btn-custom" style="background-color: #F38126;">Agende</button>  
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- office end section -->
+                                        <div class="d-flex align-items-center">
+                                            <img  class="imgIcon2" src="./assets/img/Dashboard/icon3.png" alt="" srcset="">
+                                            <div class="d-flex flex-column ml-3">
+                                                <h5 class="mb-2">Tecnologia e precisão.</h5>
+                                                <p class="text-muted mb-4">Resultados mais rápidos por contarem com equipamentos de última geração.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Botão centralizado -->
+                                        <div class="d-grid p-5">
+                                            <a href="agendamento.html"><button type="button" class="btn btn-custom" style="background-color: #F38126;">Saiba mais</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- office end section -->
             
             <!-- accordion section -->
 
@@ -330,9 +334,10 @@
                           </div>
                           <!-- accordion  end item 6 -->
                             <br>
-                            <!-- Botão centralizado -->
-                        <div class="d-grid">
-                            <button type="button" class="btn btn-custom" style="background-color: #F38126;">Agende</button>  
+                           <div class="d-grid p-5">
+                            <a href="agendamento.html" style="display: flex; justify-content: center; align-items: center; text-decoration:none;">
+                                <button type="button" class="btn btn-custom" style="background-color: #F38126;">Agende</button>
+                            </a>
                         </div>
                         </div>
                       </div>
@@ -443,13 +448,13 @@
         <footer class="navbar navbar-expand-lg">
             <div class="container">
               <!-- Logo -->
-            <a class="getstarted scrollto" href="#about">
-                <img src="./assets/img/Dashboard/logo.png" alt="" srcset="">
+            <a class="getstarted scrollto" href="#">
+                <img style="margin-left: 80px;" src="./assets/img/Dashboard/logo.png">
             </a>
           
               <!-- Itens da barra de navegação -->
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto small fw-bolder"> <!-- Adicionado mx-auto para centralizar -->
+                <ul class="navbar-nav mx-auto small fw-bolder" style="margin-right: 80px;"> <!-- Adicionado mx-auto para centralizar -->
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
@@ -458,14 +463,14 @@
                 </ul>   
             
                 <!-- Links de redes sociais -->
-                <ul class="navbar-nav">
+                <ul class="navbar-nav"  style="margin-right: 90px;">
                     <li class="nav-item">
                         <a class="nav-link me-3" href="#">
                             <i class="bi bi-facebook"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
+                    <li class="nav-item " >
+                        <a class="nav-link" href="#" >
                             <i class="bi bi-instagram"></i>
                         </a>
                     </li>

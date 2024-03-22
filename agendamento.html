@@ -18,71 +18,59 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100" >
-        <main class="flex-shrink-0">
-            
-            <nav class="navbar navbar-expand-sm">
-                <div class="container py-1 my-1"> <!-- Reduzindo o padding e a margem verticalmente -->
-                    <div class="row align-items-center"> <!-- Usando align-items-center para centralizar verticalmente -->
-                        <div class="col-auto">
-                            <a class="getstarted scrollto" href="#about">
-                                <img src="./assets/img/Dashboard/logo.png" alt="" srcset="">
-                            </a>
-                            <div class="col-auto">
-                                <h1>Agendamento</h1> <!-- Colocando o h1 abaixo da logo -->
-                                <div class="col-auto"> <!-- Movendo os links para outra linha -->
-                                    <a class="nav-link" href="index.html">
-                                        <img src="./assets/img/Dashboard/home.png" alt="" srcset="">
-                                        <span>Home ></span>
-                                    </a>
-                                    <a class="nav-link" href="agendamento.html">Agende</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+              <!-- Navigation-->
+              <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container">
+                    <a class="getstarted scrollto" href="#">
+                        <img class="imgLogo" src="./assets/img/Dashboard/logo.png">
+                        <button class="navbar-toggler p-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </a>
+                    <!-- Menu de navegação -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto small fw-bolder"> <!-- Adicionado mx-auto para centralizar -->
+                        <ul class="navbar-nav mx-auto small fw-bolder" style="padding-right: 90px;"> <!-- Adicionado mx-auto para centralizar -->
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
                             <li class="nav-item"><a class="nav-link" href="resume.html">Serviços</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Sobre Nos</a></li>
+                            <a href="agendamento.html"><button type="button" class="btn btn-custom m-2" style="background-color: #F38126;">Agende</button></a>
                         </ul>
-                        <button type="button" class="btn btn-custom" style="background-color: #F38126;">Agende</button>
                     </div>
-                </div>
-            </nav>   
+                </div>                        
+            </nav>      
             <!-- end nav -->
              
             <!-- FORM-->
-            <section class="py-5" style="background: linear-gradient(to bottom, #F38126, #F38126); border: 2px solid #ffffff; height: 80vh;">
+            <section class="py-5" style="background: linear-gradient(to bottom, #F38126, #F38126); border: 2px solid #ffffff;">
                 <div class="container">
-                    <div class="row justify-content-center"> <!-- Centralizando o conteúdo -->
+                    <div class="row justify-content-center">
                         <div class="col-lg-7">
-                            <div class="card mt-4 p-5 bg-light"> <!-- Aumentando o padding -->
+                            <div class="card mt-4 p-4 p-md-5 bg-light"> <!-- Reduzindo o padding no mobile -->
                                 <div class="card-body bg-light">
                                     <form id="contact-form" role="form">
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-6 mb-3">
                                                 <div class="form-group">
-                                                    <input id="form_name" type="text" name="name" class="form-control mb-3" placeholder="Nome *" required="required" data-error="Firstname is required.">
+                                                    <input id="form_name" type="text" name="name" class="form-control form-control-lg" placeholder="Nome *" required="required" data-error="Firstname is required.">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-6 mb-3">
                                                 <div class="form-group">
-                                                    <input id="form_telefone" type="text" name="telefone" class="form-control mb-3" placeholder="Telefone *" required="required" data-error="Telefone is required.">
+                                                    <input id="form_telefone" type="text" name="telefone" class="form-control form-control-lg" placeholder="Telefone *" required="required" data-error="Telefone is required.">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-6 mb-3">
                                                 <div class="form-group">
-                                                    <input id="form_email" type="email" name="email" class="form-control mb-3" placeholder="Email *" required="required" data-error="Valid email is required.">
+                                                    <input id="form_email" type="email" name="email" class="form-control form-control-lg" placeholder="Email *" required="required" data-error="Valid email is required.">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="input-group mb-3">
-                                                    <select class="form-select w-100" aria-label="Serviços"> <!-- Adicionando a classe w-100 para largura de 100% -->
+                                            <div class="col-md-6 mb-3">
+                                                <div class="input-group">
+                                                    <select class="form-select form-select-lg" aria-label="Serviços">
                                                         <option selected disabled>Serviços</option>
                                                         <option value="1">Ultrassonografias</option>
                                                         <option value="2">Raio X</option>
@@ -93,10 +81,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row justify-content-center"> <!-- Centralizando o botão -->
-                                            <button type="submit" class="btn btn-warning">
-                                                <i class="bi bi-whatsapp m-2"></i>Agendar
-                                            </button>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-6">
+                                                <button type="submit" class="btn btn-warning btn-lg w-100">
+                                                    <i class="bi bi-whatsapp m-2"></i>Agendar
+                                                </button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -107,16 +97,17 @@
             </section>
         </main>
         <!-- Footer-->
-        <footer class="navbar navbar-expand-lg">
+         <!-- Footer-->
+         <footer class="navbar navbar-expand-lg">
             <div class="container">
               <!-- Logo -->
-            <a class="getstarted scrollto" href="#about">
-                <img src="./assets/img/Dashboard/logo.png" alt="" srcset="">
+            <a class="getstarted scrollto" href="#">
+                <img style="margin-left: 80px;" src="./assets/img/Dashboard/logo.png">
             </a>
           
               <!-- Itens da barra de navegação -->
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto small fw-bolder"> <!-- Adicionado mx-auto para centralizar -->
+                <ul class="navbar-nav mx-auto small fw-bolder" style="margin-right: 80px;"> <!-- Adicionado mx-auto para centralizar -->
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
@@ -125,14 +116,14 @@
                 </ul>   
             
                 <!-- Links de redes sociais -->
-                <ul class="navbar-nav">
+                <ul class="navbar-nav"  style="margin-right: 90px;">
                     <li class="nav-item">
                         <a class="nav-link me-3" href="#">
                             <i class="bi bi-facebook"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
+                    <li class="nav-item " >
+                        <a class="nav-link" href="#" >
                             <i class="bi bi-instagram"></i>
                         </a>
                     </li>

@@ -20,144 +20,127 @@
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-           <!-- nav -->
-           <nav class="navbar navbar-expand-sm">
-            <div class="container py-1 my-1"> <!-- Reduzindo o padding e a margem verticalmente -->
-                <div class="row align-items-center"> <!-- Usando align-items-center para centralizar verticalmente -->
-                    <div class="col-auto">
-                        <a class="getstarted scrollto" href="#about">
-                            <img src="./assets/img/Dashboard/logo.png" alt="" srcset="">
-                        </a>
-                        <div class="col-auto">
-                            <h1>Contato</h1> <!-- Colocando o h1 abaixo da logo -->
-                            <div class="col-auto"> <!-- Movendo os links para outra linha -->
-                                <a class="nav-link" href="index.html">
-                                    <img src="./assets/img/Dashboard/home.png" alt="" srcset="">
-                                    <span>Home ></span>
-                                </a>
-                                <a class="nav-link" href="agendamento.html">Agende</a>
-                            </div>
-                        </div>
-
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container">
+                    <a class="getstarted scrollto" href="#">
+                        <img class="imgLogo" src="./assets/img/Dashboard/logo.png">
+                        <button class="navbar-toggler p-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </a>
+                    <!-- Menu de navegação -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto small fw-bolder" style="padding-right: 90px;"> <!-- Adicionado mx-auto para centralizar -->
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">Serviços</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Sobre Nos</a></li>
+                            <a href="agendamento.html"><button type="button" class="btn btn-custom m-2" style="background-color: #F38126;">Agende</button></a>
+                        </ul>
                     </div>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto small fw-bolder"> <!-- Adicionado mx-auto para centralizar -->
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
-                        <li class="nav-item"><a class="nav-link" href="resume.html">Serviços</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Sobre Nos</a></li>
-                    </ul>
-                    <button type="button" class="btn btn-custom" style="background-color: #F38126;">Agende</button>
-                </div>
-            </div>
-        </nav>   
-        <!-- end nav -->
-        <section class="py-5" style="background-color: #F38126;">
-            <div class="container px-5">
-                <!-- Contact form and text div-->
-                <div class="bg-light rounded-4 py-5">
-                    <div class="row">
-                        <!-- Formulário à esquerda -->
-                        <div class="col-lg-6 col-md-6">
-                            <section class="form" style="margin-left: 50px;">
-                                <div class="text-center mb-5">
-                                    <h1 style="padding-top: 45px">Tire suas Dúvidas aqui!</h1>
-                                </div>
-                                <form id="contactForm" style="margin-top: 50px;" data-sb-form-api-token="API_TOKEN">
-                                    <!-- Name input-->
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="text" placeholder="Nome*" data-sb-validations="required" />
-                                        <label for="email">Seu nome *</label>
-                                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                </div>                        
+            </nav>      
+            <!-- end nav -->
+             
+
+            <section class="py-5" style="background-color: #F38126;">
+                <div class="container px-5">
+                    <!-- Contact form and text div-->
+                    <div class="bg-light rounded-4 py-5">
+                        <div class="row">
+                            <!-- Formulário à esquerda -->
+                            <div class="col-lg-6 col-md-6">
+                                <section class="form">
+                                    <div class="text-center mb-5">
+                                        <h1 style="padding-top: 45px">Tire suas Dúvidas aqui!</h1>
                                     </div>
-                                    <!-- Email address input-->
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                        <label for="email">Seu email *</label>
-                                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                                    </div>
-                                    <!-- Message input-->
-                                    <div class="form-floating mb-3">
-                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 8em" data-sb-validations="required"></textarea>
-                                        <label for="message">Sua mensagem*</label>
-                                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                                    </div>
-        
-                                    <div class="d-none" id="submitSuccessMessage">
-                                        <div class="text-center mb-3">
-                                            <div class="fw-bolder">Form submission successful!</div>
-                                            To activate this form, sign up at
-                                            <br />
-                                            
+                                    <form id="contactForm" style="margin-top: 50px;" data-sb-form-api-token="API_TOKEN">
+                                        <!-- Name input-->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="name" type="text" placeholder="Nome*" data-sb-validations="required" />
+                                            <label for="email">Seu nome *</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                                         </div>
-                                    </div>
-                                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-5">Error sending message!</div></div>
-                                    <!-- Submit Button-->
-                                    <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Enviar</button></div>
-                                </form>
-                            </section>
-                        </div>
-
-
-                        <section class="d-flex justify-content-end" style="padding-top: 50px;">
+                                        <!-- Email address input-->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                            <label for="email">Seu email *</label>
+                                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                        </div>
+                                        <!-- Message input-->
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 8em" data-sb-validations="required"></textarea>
+                                            <label for="message">Sua mensagem*</label>
+                                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                        </div>
+            
+                                        <div class="d-none" id="submitSuccessMessage">
+                                            <div class="text-center mb-3">
+                                                <div class="fw-bolder">Form submission successful!</div>
+                                                To activate this form, sign up at
+                                                <br />
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-5">Error sending message!</div></div>
+                                        <!-- Submit Button-->
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-6">
+                                                <button type="submit" class="btn btn-custom btn-lg" style="background-color: #F38126;">
+                                                    <i class="bi bi-whatsapp m-2"></i>Agendar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </section>
+                            </div>
+            
                             <!-- Div de texto à direita -->
-                            <div class="col-lg-12 col-md-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="container">
                                     <div class="row">
                                         <!-- Telefone e Endereço -->
-                                        <div class="col-md-6">
+                                        <div class="col-md-12 mb-4">
                                             <h4 style="color: white;">Telefone</h4>
                                             <p>(11) 1234-5678</p>
                                             <p>(11) 98765-4321</p>
-                        
+                            
                                             <h4 style="color: white;">Endereço</h4>
                                             <p>R. Nove de Julho, s/n - Centro, São Paulo - SP, 01000-000</p>
                                         </div>
-                                        <div class="col-md-6">
-                                            <!-- Horário de Funcionamento e Mídias Sociais -->
-                                            <div class="row d-flex">
-                                                <div class="col-md-6">
-                                                    <div class="horario">
-                                                        <h4 style="color: white;">Horário de Funcionamento</h4>
-                                                        <p>Segunda a Sexta-feira - 7 às 19 horas.</p>
-                                                        <p>Sábado - 7 às 12 horas.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="row">
-                                                        <div class="col-md-2">
-                                                            <ul class="navbar-nav">
-                                                                <li class="nav-item me-3">
-                                                                    <a class="nav-link" href="#">
-                                                                        <i class="bi bi-facebook"></i>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <ul class="navbar-nav">
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#">
-                                                                        <i class="bi bi-instagram"></i>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div class="col-md-12 d-flex align-items-center">
+                                            <!-- Horário de Funcionamento -->
+                                            <div class="horario me-4">
+                                                <h4 style="color: white;">Horário de Funcionamento</h4>
+                                                <p>Segunda a Sexta-feira - 7 às 19 horas.</p>
+                                                <p>Sábado - 7 às 12 horas.</p>
+                                            </div>
+                                            <!-- Ícones de Redes Sociais -->
+                                            <div>
+                                                <ul class="navbar-nav">
+                                                    <li class="nav-item me-3">
+                                                        <a class="nav-link" href="#">
+                                                            <i class="bi bi-facebook"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <i class="bi bi-instagram"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </section>
-
+            
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </main>
         <footer class="navbar navbar-expand-lg">
             <div class="container">

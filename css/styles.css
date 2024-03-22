@@ -94,8 +94,6 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* acorddion */
-
 
 hr {
   margin: 1rem 0;
@@ -114,6 +112,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
+  margin-top: 50px;
 }
 
 @media (min-width: 1200px) {
@@ -150,7 +149,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 h6, .h6 {
@@ -596,6 +595,9 @@ progress {
   height: auto;
 }
 
+
+
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -629,21 +631,29 @@ progress {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
-  padding-left: 230px; /* Espaçamento à esquerda */
+ 
 }
 
+@media (max-width: 768px) {
+
+  .img-fluid {
+      padding-right: 60px;
+  }
+}
 
 @media (min-width: 500px) {
-  .container-sm, .container {
+  .container-sm, .container{
     max-width: 540px;
+    
   }
+  
 }
 @media (min-width: 500px) {
   .container-md, .container-sm, .container {
     max-width: 720px;
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 700px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
@@ -651,13 +661,78 @@ progress {
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px;
+    
   }
+
+  .imgLogo {
+    padding-left: 250px;
+  }
+
+  
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
+    margin-left: 90px;
+    
   }
 }
+
+@media (max-width: 768px) {
+  .px-15 {
+      padding-right: 80px;
+      margin-bottom: 5px;
+
+  }
+
+  .justify-content-center {
+      justify-content: center !important; /* Alinhar conteúdo ao centro */
+  }
+
+  .align-items-center {
+      align-items: center !important; /* Alinhar itens ao centro */
+  }
+
+  .col-md-6 {
+      flex: 0 0 100%; /* Definir largura total para colunas em telas menores */
+      max-width: 100%; /* Largura máxima 100% */
+      margin-bottom: -50px; /* Adicionar espaço entre as colunas */
+      text-align: center; /* Alinhar texto ao centro */
+      
+  }
+  
+  div, .d-flex .flex-column .ml-3 {
+    margin-right: 50px;
+    margin-top: 50px;
+    padding: -150px;
+  }
+
+  img, .img-fluid {
+    margin-left: 20px;
+  }
+  
+  .imgIcon2{
+    padding-left: 25px;
+  }
+
+  .mt-40 {
+      margin-top: 40px; /* Adicionar margem superior */
+  }
+
+  .text-gradient {
+      display: block; /* Garantir que o span seja exibido como bloco */
+      background: linear-gradient(45deg, #f38126, #0030E6); /* Adicionar gradiente de texto */
+      -webkit-background-clip: text; /* Clip de texto ao gradiente */
+      -webkit-text-fill-color: transparent; /* Preenchimento transparente para texto */
+      text-align: center; /* Alinhar texto ao centro */
+  }
+
+  .text-muted {
+      font-size: 14px; /* Tamanho da fonte reduzido */
+      text-align: center; /* Alinhar texto ao centro */
+  }
+}
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -1999,14 +2074,27 @@ progress {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+
 section .form {
   /* Frame 1 */
+
 position: relative;
 width: 503px;
-height: 637px;
+height: 537px;
+
 background: #FFFFFF;
 border-radius: 0px 100px 0px 0px;
 
+}
+
+@media (max-width: 700px) {
+  section .form {
+    width: 100%; /* Reduzindo o tamanho do formulário */
+    max-width: 800px; /* Definindo uma largura máxima */
+    margin-bottom: 20px; /* Centralizando o formulário */
+    border-radius: 0px 100px 0px 0px; /* Removendo o raio de borda */
+    
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4167,8 +4255,8 @@ textarea.form-control-lg {
 }
 
 .card {
-  --bs-card-spacer-y: 1rem;
-  --bs-card-spacer-x: 1rem;
+  --bs-card-spacer-y: 0.5rem;
+  --bs-card-spacer-x: 0.5rem;
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-border-width: 1px;
   --bs-card-border-color: var(--bs-border-color-translucent);
@@ -4310,10 +4398,33 @@ textarea.form-control-lg {
   margin-bottom: var(--bs-card-group-margin);
 }
 @media (min-width: 576px) {
+
+  
   .card-group {
     display: flex;
     flex-flow: row wrap;
+    padding: 20px; /* Reduzindo o padding */
+   
   }
+  .form-group {
+    margin-bottom: 15px; /* Adicionando margem inferior */
+}
+
+.form-control {
+    width: 100%; /* Definindo largura total */
+}
+
+.input-group {
+    width: 100%; /* Definindo largura total */
+}
+
+.btn {
+    width: 100%; /* Definindo largura total */
+}
+
+.justify-content-center {
+    justify-content: center; /* Centralizando o conteúdo */
+}
   .card-group > .card {
     flex: 1 0 0%;
     margin-bottom: 0;
