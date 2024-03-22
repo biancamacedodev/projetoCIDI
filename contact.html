@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content />
         <meta name="author" content />
-        <title>Modern Business - Start Bootstrap Template</title>
+        <title>Contato</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Custom Google font-->
@@ -20,114 +20,181 @@
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Start Bootstrap</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
+           <!-- nav -->
+           <nav class="navbar navbar-expand-sm">
+            <div class="container py-1 my-1"> <!-- Reduzindo o padding e a margem verticalmente -->
+                <div class="row align-items-center"> <!-- Usando align-items-center para centralizar verticalmente -->
+                    <div class="col-auto">
+                        <a class="getstarted scrollto" href="#about">
+                            <img src="./assets/img/Dashboard/logo.png" alt="" srcset="">
+                        </a>
+                        <div class="col-auto">
+                            <h1>Contato</h1> <!-- Colocando o h1 abaixo da logo -->
+                            <div class="col-auto"> <!-- Movendo os links para outra linha -->
+                                <a class="nav-link" href="index.html">
+                                    <img src="./assets/img/Dashboard/home.png" alt="" srcset="">
+                                    <span>Home ></span>
+                                </a>
+                                <a class="nav-link" href="agendamento.html">Agende</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </nav>
-            <!-- Page content-->
-            <section class="py-5">
-                <div class="container px-5">
-                    <!-- Contact form-->
-                    <div class="bg-light rounded-4 py-5 px-4 px-md-5">
-                        <div class="text-center mb-5">
-                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
-                            <h1 class="fw-bolder">Get in touch</h1>
-                            <p class="lead fw-normal text-muted mb-0">Let's work together!</p>
-                        </div>
-                        <div class="row gx-5 justify-content-center">
-                            <div class="col-lg-8 col-xl-6">
-                                <!-- * * * * * * * * * * * * * * *-->
-                                <!-- * * SB Forms Contact Form * *-->
-                                <!-- * * * * * * * * * * * * * * *-->
-                                <!-- This form is pre-integrated with SB Forms.-->
-                                <!-- To make this form functional, sign up at-->
-                                <!-- https://startbootstrap.com/solution/contact-forms-->
-                                <!-- to get an API token!-->
-                                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto small fw-bolder"> <!-- Adicionado mx-auto para centralizar -->
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Sobre Nos</a></li>
+                    </ul>
+                    <button type="button" class="btn btn-custom" style="background-color: #F38126;">Agende</button>
+                </div>
+            </div>
+        </nav>   
+        <!-- end nav -->
+        <section class="py-5" style="background-color: #F38126;">
+            <div class="container px-5">
+                <!-- Contact form and text div-->
+                <div class="bg-light rounded-4 py-5">
+                    <div class="row">
+                        <!-- Formulário à esquerda -->
+                        <div class="col-lg-6 col-md-6">
+                            <section class="form" style="margin-left: 50px;">
+                                <div class="text-center mb-5">
+                                    <h1 style="padding-top: 45px">Tire suas Dúvidas aqui!</h1>
+                                </div>
+                                <form id="contactForm" style="margin-top: 50px;" data-sb-form-api-token="API_TOKEN">
                                     <!-- Name input-->
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                        <label for="name">Full name</label>
+                                        <input class="form-control" id="name" type="text" placeholder="Nome*" data-sb-validations="required" />
+                                        <label for="email">Seu nome *</label>
                                         <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                                     </div>
                                     <!-- Email address input-->
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                        <label for="email">Email address</label>
+                                        <label for="email">Seu email *</label>
                                         <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                         <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                                     </div>
-                                    <!-- Phone number input-->
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                        <label for="phone">Phone number</label>
-                                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                                    </div>
                                     <!-- Message input-->
                                     <div class="form-floating mb-3">
-                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                        <label for="message">Message</label>
+                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 8em" data-sb-validations="required"></textarea>
+                                        <label for="message">Sua mensagem*</label>
                                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                     </div>
-                                    <!-- Submit success message-->
-                                    <!---->
-                                    <!-- This is what your users will see when the form-->
-                                    <!-- has successfully submitted-->
+        
                                     <div class="d-none" id="submitSuccessMessage">
                                         <div class="text-center mb-3">
                                             <div class="fw-bolder">Form submission successful!</div>
                                             To activate this form, sign up at
                                             <br />
-                                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                            
                                         </div>
                                     </div>
-                                    <!-- Submit error message-->
-                                    <!---->
-                                    <!-- This is what your users will see when there is-->
-                                    <!-- an error submitting the form-->
-                                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-5">Error sending message!</div></div>
                                     <!-- Submit Button-->
-                                    <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Enviar</button></div>
                                 </form>
-                            </div>
+                            </section>
                         </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; Your Website 2023</div></div>
-                    <div class="col-auto">
-                        <a class="small" href="#!">Privacy</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Terms</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Contact</a>
-                    </div>
+
+
+                        <section class="d-flex justify-content-end" style="padding-top: 50px;">
+                            <!-- Div de texto à direita -->
+                            <div class="col-lg-12 col-md-6">
+                                <div class="container">
+                                    <div class="row">
+                                        <!-- Telefone e Endereço -->
+                                        <div class="col-md-6">
+                                            <h4 style="color: white;">Telefone</h4>
+                                            <p>(11) 1234-5678</p>
+                                            <p>(11) 98765-4321</p>
+                        
+                                            <h4 style="color: white;">Endereço</h4>
+                                            <p>R. Nove de Julho, s/n - Centro, São Paulo - SP, 01000-000</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <!-- Horário de Funcionamento e Mídias Sociais -->
+                                            <div class="row d-flex">
+                                                <div class="col-md-6">
+                                                    <div class="horario">
+                                                        <h4 style="color: white;">Horário de Funcionamento</h4>
+                                                        <p>Segunda a Sexta-feira - 7 às 19 horas.</p>
+                                                        <p>Sábado - 7 às 12 horas.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <ul class="navbar-nav">
+                                                                <li class="nav-item me-3">
+                                                                    <a class="nav-link" href="#">
+                                                                        <i class="bi bi-facebook"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <ul class="navbar-nav">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#">
+                                                                        <i class="bi bi-instagram"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                 </div>
             </div>
-        </footer>
+        </section>
+        </main>
+        <footer class="navbar navbar-expand-lg">
+            <div class="container">
+              <!-- Logo -->
+            <a class="getstarted scrollto" href="#about">
+                <img src="./assets/img/Dashboard/logo.png" alt="" srcset="">
+            </a>
+          
+              <!-- Itens da barra de navegação -->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto small fw-bolder"> <!-- Adicionado mx-auto para centralizar -->
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Sobre Nos</a></li>
+                </ul>   
+            
+                <!-- Links de redes sociais -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                </ul>   
+            </div>
+            </div>
+          </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
